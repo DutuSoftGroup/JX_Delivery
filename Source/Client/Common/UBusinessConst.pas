@@ -1505,7 +1505,7 @@ begin
     nStr := nListA.Values['NoDate'];
     if nStr = '' then
     begin
-      nStr := '(TMAKETIME>=''%s'' And TMAKETIME<''%s'')';
+      nStr := '(t1.dbilldate>=''%s'' And t1.dbilldate<''%s'')';
       nOutData := nOutData + Format(nStr, [
                     nListA.Values['DateStart'],
                     nListA.Values['DateEnd']]);
